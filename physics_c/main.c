@@ -11,6 +11,11 @@
 
 #include <stdio.h>
 
+double GravitationalForce(double G, double m1, double m2, double r2)
+{
+    return G * (m1 * m2) /r2;
+}
+
 int main() {
     //Basic Newtonian gravitational force
     //Might turn this into floats later.
@@ -19,11 +24,8 @@ int main() {
         TO:DO #1
         Make a vector that does the equals and opposites, sum all forces together, and do that in a while loop
     */
-    double G = 1.0;
-    double m1 = 43.0, m2 = 21.0;
-    double r2 = 2.0;
-
-    double F = G * (m1 * m2) / r2;
+    
+    double F = GravitationalForce(2, 34, 1.2, 1.008);
 
     printf("Force: %f\n", F);
     return 0;
